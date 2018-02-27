@@ -1,10 +1,31 @@
 doctype html
-html
+html lang="it"
   head
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"
     title
-      | Cgpartners
+      | CG Partners
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
-    = yield
+    header.header
+      = link_to '', root_path, class: 'logo'
+      nav.nav
+        .menu
+          .menu__item
+            = link_to 'CHI SIAMO', '#'
+          .menu__item
+            = link_to 'COSA FACCIAMO', '#'
+          .menu__item
+            = link_to 'FOCUS', '#'
+          .menu__item
+            = link_to 'STARTUP', '#'
+          .menu__item
+            = link_to 'CONTATTI', '#'
+        .search
+          = link_to 'O', '#'
+        .language
+          = link_to 'EN', '#'
+    main.main
+      = yield
