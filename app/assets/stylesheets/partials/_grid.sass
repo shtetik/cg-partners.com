@@ -1,0 +1,21 @@
+.grid
+  display: flex
+  flex-wrap: wrap
+
+  &--gutters
+    margin: -1em 0 0 -1em
+
+    > .grid__cell
+      padding: 1em 0 0 1em
+
+.grid__cell
+  position: relative
+  flex: 1
+
+  &--1of2
+    flex: 0 0 50%
+    +media-down(tablet)
+      flex: 0 0 100%
+
+  &--1of3
+    flex: 0 0 calc(100% / 3)
