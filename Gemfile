@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'pg', '~> 1.0'
 gem 'puma', '~> 3.11', '>= 3.11.2'
 
+gem 'slim-rails', '~> 3.1', '>= 3.1.3'
 gem 'coffee-rails', '~> 4.2'
 gem 'sass-rails', '~> 5.0', '>= 5.0.7'
 gem 'turbolinks', '~> 5.1'
