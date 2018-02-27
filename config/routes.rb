@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  root 'application#hello'
+  root to: 'pages#home'
+
+  PagesController.action_methods.each do |action|
+    get "/#{action}", to: "pages##{action}", as: "#{action}"
+  end
 end
