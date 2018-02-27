@@ -45,3 +45,24 @@ task :env do
     execute 'env'
   end
 end
+
+namespace :rails do
+  rvm_execer = '/usr/local/rvm/bin/rvm default do bundle exec'
+
+  desc 'Open the rails console on the primary remote server'
+  task :console do
+    on roles(:app), primary: true do |host|
+      command = "cd #{deploy_to}/current && #{rvm_execer} rails console #{fetch(:stage)}"
+      exec "ssh -l #{host.user} #{host.hostname} -p #{host.port || 22} -t 'cd #{deploy_to}/current && #{command}'"
+    end
+  end
+
+  desc 'Tail the rails production log file on the primary remote server'
+  task :log do
+    on roles(:app), primary: true do |host|
+      command = "tail -f production.log"
+      exec "ssh -l #{host.user} #{host.hostname} -p #{host.port || 22} -t 'cd #{deploy_to}/current/log && #{command}'"
+    end
+  end
+end
+
