@@ -17,3 +17,11 @@
 /yarn-error.log
 
 .byebug_history
+
+/public/system/*
+/public/uploads/*
+
+.env
+
+.DS_Store
+**/.DS_Store
