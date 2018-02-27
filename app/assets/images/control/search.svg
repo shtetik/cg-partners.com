@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+	<!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+	<!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+	<!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+	<!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+	<!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+]>
+<svg version="1.1" id="Layer_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 21.8223801 21.8271599" enable-background="new 0 0 21.8223801 21.8271599" xml:space="preserve">
+<metadata>
+	<sfw  xmlns="&ns_sfw;">
+		<slices></slices>
+		<sliceSourceBounds  height="21.8271599" width="21.8223801" bottomLeftOrigin="true" x="949.697937" y="-550.5581665">
+			</sliceSourceBounds>
+	</sfw>
+</metadata>
+<path d="M21.6336308,20.7138443l-5.3043232-5.3042631c1.4228153-1.6357603,2.2842216-3.770195,2.2842216-6.1028156
+	C18.6135292,4.1718941,14.4369202,0,9.3067646,0C4.1718922,0,0,4.1766109,0,9.3067656s4.17661,9.3067675,9.3067646,9.3067675
+	c2.3326197,0,4.4670544-0.8614082,6.1028156-2.2842255l5.304266,5.304327
+	c0.1259537,0.1257114,0.2954044,0.1935253,0.4598904,0.1935253c0.1644917,0,0.3339424-0.0628529,0.4598942-0.1935253
+	C21.8852959,21.3819084,21.8852959,20.9655704,21.6336308,20.7138443L21.6336308,20.7138443z M1.3018818,9.3067656
+	c0-4.4138775,3.5910063-7.9999228,8.000164-7.9999228c4.4136353,0,7.9999237,3.5910079,7.9999237,7.9999228
+	s-3.5862885,8.0048838-7.9999237,8.0048838C4.8928881,17.3116493,1.3018818,13.720645,1.3018818,9.3067656L1.3018818,9.3067656z
+	 M1.3018818,9.3067656"/>
+</svg>
