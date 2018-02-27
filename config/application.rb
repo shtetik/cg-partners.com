@@ -37,5 +37,8 @@ module Cgpartners
       g.helper          false
       g.skip_routes     true
     end
+
+    config.i18n.default_locale = :it
+    config.i18n.available_locales = [:it, :en]
   end
 end
