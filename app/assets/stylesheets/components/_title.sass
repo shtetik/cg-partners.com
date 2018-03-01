@@ -1,0 +1,19 @@
+.title
+  color: $color--brand
+
+  &--big
+    @extend %title-first
+  &--middle
+    @extend %title-second
+  &--small
+    @extend %title-small
+
+  &--indent-small
+    margin-bottom: 1.125rem
+  &--indent-large
+    margin-bottom: 2.5rem
+
+
+.subtitle
+  @extend %subtitle
+  color: $color--second

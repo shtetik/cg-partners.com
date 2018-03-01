@@ -13,19 +13,14 @@ html lang="it"
       = link_to '', root_path, class: 'logo'
       nav.nav
         .menu
-          .menu__item
-            = link_to 'CHI SIAMO', '#'
-          .menu__item
-            = link_to 'COSA FACCIAMO', '#'
-          .menu__item
-            = link_to 'FOCUS', '#'
-          .menu__item
-            = link_to 'STARTUP', '#'
-          .menu__item
-            = link_to 'CONTATTI', '#'
+          = link_to 'CHI SIAMO'    , '#', class: 'menu__link'
+          = link_to 'COSA FACCIAMO', '#', class: 'menu__link'
+          = link_to 'FOCUS'        , '#', class: 'menu__link'
+          = link_to 'STARTUP'      , '#', class: 'menu__link'
+          = link_to 'CONTATTI'     , '#', class: 'menu__link'
         .search
-          = link_to 'O', '#'
+          = link_to '', '#search', class: 'search__link'
         .language
-          = link_to 'EN', '#'
-    main.main
+          = link_to 'EN', '#', class: 'language__link'
+    main
       = yield

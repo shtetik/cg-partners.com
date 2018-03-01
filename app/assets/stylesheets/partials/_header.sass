@@ -1,11 +1,11 @@
 .header
   display: flex
   height: 4.375em
-  margin-top: 3.125em
+  margin: 3.125em -4.375em 4.375em 0
 
 .logo
   width: 4.75em
-  margin: 0 6% 0 4.375em
+  margin-right: 6%
   background: asset-url('logo.png') no-repeat
   background-size: contain
 
@@ -13,6 +13,7 @@
   display: flex
   flex: auto
   border: 1px solid #d3dce2
+  border-right: none
 
 .menu
   display: flex
@@ -20,7 +21,18 @@
   justify-content: space-around
   align-items: center
 
-  &__item
+.menu,
+.language
+  &__link
+    @extend %text-first
+    color: $color--plain
+
+.search
+  &__link
+    height: 1.4375em
+    width: 1.375em
+    background: asset-url('control/search.svg') no-repeat
+    background-size: 20px auto
 
 .search,
 .language
@@ -30,5 +42,3 @@
   width: 4.375em
   border-left: 1px solid #d3dce2
 
-.search
-.language

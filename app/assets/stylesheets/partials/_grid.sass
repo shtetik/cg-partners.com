@@ -2,11 +2,20 @@
   display: flex
   flex-wrap: wrap
 
-  &--gutters
-    margin: -1em 0 0 -1em
-
+  &--gutters-normal
+    margin-left: -4%
+    padding-right: 4%
     > .grid__cell
-      padding: 1em 0 0 1em
+      padding-left: 4%
+
+  &--gutters-large
+    margin-left: -7%
+    padding-right: 6%
+    > .grid__cell
+      padding-left: 7%
+
+  &--downward
+    align-items: flex-end
 
 .grid__cell
   position: relative
@@ -16,6 +25,9 @@
     flex: 0 0 50%
     +media-down(tablet)
       flex: 0 0 100%
+
+  &--2of3
+    flex: 0 0 calc(100% / 3 * 2)
 
   &--1of3
     flex: 0 0 calc(100% / 3)
