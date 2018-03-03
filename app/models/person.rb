@@ -11,7 +11,8 @@ class Person < ApplicationRecord
 
   validates_attachment :avatar,
     content_type: { content_type: /\Aimage\/.*\z/ },
-    size: { in: 0..300.kilobytes }
+    size: { in: 0..300.kilobytes },
+    presence: true
 
   validates :full_name, presence: true, uniqueness: true
   validates :text, presence: true
