@@ -8,12 +8,14 @@ Trestle.resource(:services) do
 
   scope :all, default: true
 
-  ServiceType.find_each do |service_type|
-    scope service_type.name,
-      lambda {
-        Service.includes(:service_type)
-          .where(service_types: { id: service_type.id })
-      }
+  if ActiveRecord::Base.connection.table_exists? 'service_types'
+    ServiceType.find_each do |service_type|
+      scope service_type.name,
+        lambda {
+          Service.includes(:service_type)
+            .where(service_types: { id: service_type.id })
+        }
+    end
   end
 
   table do
