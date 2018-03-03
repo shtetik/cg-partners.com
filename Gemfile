@@ -48,6 +48,8 @@ group :development do
   gem 'spring', '~> 2.0', '>= 2.0.2'
   gem 'spring-watcher-listen', '~> 2.0', '>= 2.0.1'
   gem 'web-console', '~> 3.5', '>= 3.5.1'
+  gem 'better_errors', '~> 2.4'
+  gem 'binding_of_caller', '~> 0.8.0'
 
   gem 'capistrano', '~> 3.10', '>= 3.10.1'
   gem 'capistrano-bundler', '~> 1.3'
