@@ -1,9 +1,9 @@
-Trestle.resource(:service_types) do
+Trestle.resource(:article_types) do
   menu do
-    item :service_types,
-      icon: "fa fa-star",
-      group: :content_management,
-      priority: 5
+    item :article_types,
+         icon: "fa fa-star",
+         group: :article_management,
+         priority: 2
   end
 
   table do

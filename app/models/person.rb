@@ -17,8 +17,9 @@ class Person < ApplicationRecord
   validates :text, presence: true
   validates :slug, presence: true, uniqueness: { case_sensitive: false }
 
-
   before_validation :normalization_emails
+
+  has_many :articles, dependent: :destroy
 
   private
 

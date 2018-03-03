@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180303104316) do
+ActiveRecord::Schema.define(version: 20180303122402) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,44 @@ ActiveRecord::Schema.define(version: 20180303104316) do
     t.datetime "remember_token_expires_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "article_translations", force: :cascade do |t|
+    t.integer "article_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "title", null: false
+    t.text "description", null: false
+    t.text "text", null: false
+    t.string "slug", null: false
+    t.index ["article_id"], name: "index_article_translations_on_article_id"
+    t.index ["locale"], name: "index_article_translations_on_locale"
+  end
+
+  create_table "article_type_translations", force: :cascade do |t|
+    t.integer "article_type_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name", null: false
+    t.string "slug", null: false
+    t.index ["article_type_id"], name: "index_article_type_translations_on_article_type_id"
+    t.index ["locale"], name: "index_article_type_translations_on_locale"
+  end
+
+  create_table "article_types", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "articles", force: :cascade do |t|
+    t.bigint "article_type_id", null: false
+    t.bigint "person_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["article_type_id"], name: "index_articles_on_article_type_id"
+    t.index ["person_id"], name: "index_articles_on_person_id"
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
@@ -102,5 +140,7 @@ ActiveRecord::Schema.define(version: 20180303104316) do
     t.index ["service_type_id"], name: "index_services_on_service_type_id"
   end
 
+  add_foreign_key "articles", "article_types"
+  add_foreign_key "articles", "people"
   add_foreign_key "services", "service_types"
 end

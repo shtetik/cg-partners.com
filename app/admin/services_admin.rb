@@ -3,7 +3,7 @@ Trestle.resource(:services) do
     item :services,
       icon: "fa fa-star",
       group: :content_management,
-      priority: 2
+      priority: 4
   end
 
   scope :all, default: true

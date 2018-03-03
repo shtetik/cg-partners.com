@@ -3,7 +3,7 @@ Trestle.resource(:people) do
     item :people,
       icon: "fa fa-star",
       group: :content_management,
-      priority: 1
+      priority: 3
   end
 
   table do
