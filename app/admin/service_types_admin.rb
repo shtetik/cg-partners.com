@@ -1,4 +1,8 @@
 Trestle.resource(:service_types) do
+  collection do
+    ServiceType.order(:id)
+  end
+
   menu do
     item :service_types,
       icon: "fa fa-star",

@@ -1,4 +1,8 @@
 Trestle.resource(:people) do
+  collection do
+    Person.order(:id)
+  end
+
   menu do
     item :people,
       icon: "fa fa-star",

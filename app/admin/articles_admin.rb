@@ -1,4 +1,8 @@
 Trestle.resource(:articles) do
+  collection do
+    Article.order(created_at: :desc)
+  end
+
   menu do
     item :articles,
       icon: "fa fa-star",
