@@ -13,14 +13,17 @@ html lang="it"
       = link_to '', root_path, class: 'logo'
       nav.nav
         .menu
-          = link_to 'CHI SIAMO'    , '#', class: 'menu__link'
-          = link_to 'COSA FACCIAMO', '#', class: 'menu__link'
-          = link_to 'FOCUS'        , '#', class: 'menu__link'
-          = link_to 'STARTUP'      , '#', class: 'menu__link'
-          = link_to 'CONTATTI'     , '#', class: 'menu__link'
+          = link_to 'CHI SIAMO'    , people_path  , class: 'menu__link'
+          = link_to 'COSA FACCIAMO', services_path, class: 'menu__link'
+          = link_to 'FOCUS'        , focus_path   , class: 'menu__link'
+          = link_to 'STARTUP'      , startup_path , class: 'menu__link'
+          = link_to 'CONTATTI'     , contact_path , class: 'menu__link'
         .search
           = link_to '', '#search', class: 'search__link'
         .language
-          = link_to 'EN', '#', class: 'language__link'
+          - if I18n.locale == :it
+            = link_to 'EN', locale_path(:en), class: 'language__link'
+          - else
+            = link_to 'IT', locale_path(:it), class: 'language__link'
     main
       = yield
