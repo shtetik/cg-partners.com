@@ -13,11 +13,16 @@ gem 'jbuilder', '~> 2.5'
 gem 'pg', '~> 1.0'
 gem 'puma', '~> 3.11', '>= 3.11.2'
 
+# Admin framework
+gem 'trestle', '~> 0.8.7'
+gem 'trestle-auth', '~> 0.2.3'
+
 gem 'slim-rails', '~> 3.1', '>= 3.1.3'
 gem 'coffee-rails', '~> 4.2'
 gem 'sass-rails', '~> 5.0', '>= 5.0.7'
 gem 'turbolinks', '~> 5.1'
 gem 'uglifier', '~> 4.1', '>= 4.1.6'
+gem 'autoprefixer-rails', '~> 8.1'
 
 group :development, :test do
   gem 'byebug', '~> 10.0', platforms: [:mri, :mingw, :x64_mingw]
