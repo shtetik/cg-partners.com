@@ -5,7 +5,9 @@ class Person < ApplicationRecord
 
   friendly_id :full_name, use: :globalize
 
-  globalize_accessors
+  globalize_accessors locales: [:it, :en],
+    attributes: [:full_name, :text, :slug]
+  globalize_validations locales: [:it, :en]
 
   has_attached_file :avatar
 
@@ -17,10 +19,13 @@ class Person < ApplicationRecord
   validates :full_name, presence: true, uniqueness: true
   validates :text, presence: true
   validates :slug, presence: true, uniqueness: { case_sensitive: false }
+  validate :validates_globalized_attributes
 
   before_validation :normalization_emails
 
   has_many :articles, dependent: :destroy
+
+
 
   private
 
