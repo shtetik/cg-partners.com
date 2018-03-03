@@ -13,12 +13,12 @@ Trestle.configure do |config|
 
   # Specify a custom image to be used for the collapsed/tablet navigation.
   #
-  # config.site_logo_small = "logo-small.png"
+  # config.site_logo_small = "logo.png"
 
   # Set the text shown in the page footer within the admin.
   # Defaults to 'Powered by Trestle'.
   #
-  # config.footer = "Powered by Trestle"
+  config.footer = nil
 
   # == Mounting Options
   #
@@ -193,4 +193,25 @@ Trestle.configure do |config|
   # config.auth.remember.cookie, ->(user) {
   #   { value: user.remember_token, expires: user.remember_token_expires_at }
   # }
+
+  config.tinymce.default.configure do |c|
+    c.skin = "trestle"
+    c.selector = "textarea.tinymce"
+    c.branding = false
+    c.elementpath = false
+    c.menubar = false
+    c.statusbar = true
+    c.plugins = [
+      :lists,
+      :link,
+      :paste
+    ]
+    c.toolbar = [
+      "styleselect | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist | indent outdent | undo redo | link unlink"
+    ]
+    c.link_context_toolbar = true
+    c.convert_urls = false
+    c.paste_as_text = true
+    c.height = 300
+  end
 end

@@ -3,6 +3,8 @@ it:
   activerecord:
     errors:
       messages:
+        in_between: "deve essere compreso tra %{min} e %{max}"
+        spoofed_media_type: "possiede contenuti che non corrispondono all'estensione dichiarata"
         record_invalid: 'Validazione fallita: %{errors}'
         restrict_dependent_destroy:
           has_one: Il record non può essere cancellato perchè esiste un %{record} dipendente

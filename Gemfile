@@ -9,14 +9,28 @@ ruby '2.5.0'
 
 gem 'rails', '~> 5.1.5'
 
+# Backend
 gem 'jbuilder', '~> 2.5'
 gem 'pg', '~> 1.0'
 gem 'puma', '~> 3.11', '>= 3.11.2'
 
+# File attachment management
+gem 'paperclip', '~> 5.2', '>= 5.2.1'
+
+# Pretty URLs
+gem 'friendly_id', '~> 5.2', '>= 5.2.3'
+gem 'friendly_id-globalize', '~> 1.0.0.alpha3'
+
+# ActiveRecord model/data translation
+gem 'globalize', '~> 5.1'
+gem 'globalize-accessors', '~> 0.2.1'
+
 # Admin framework
 gem 'trestle', '~> 0.8.7'
 gem 'trestle-auth', '~> 0.2.3'
+gem 'trestle-tinymce', '~> 0.1.1'
 
+# Frontend
 gem 'slim-rails', '~> 3.1', '>= 3.1.3'
 gem 'coffee-rails', '~> 4.2'
 gem 'sass-rails', '~> 5.0', '>= 5.0.7'

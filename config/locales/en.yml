@@ -3,6 +3,8 @@ en:
   activerecord:
     errors:
       messages:
+        in_between: "must be in between %{min} and %{max}"
+        spoofed_media_type: "has contents that are not what they are reported to be"
         record_invalid: "Validation failed: %{errors}"
         restrict_dependent_destroy:
           has_one: "Cannot delete record because a dependent %{record} exists"
