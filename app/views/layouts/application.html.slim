@@ -21,9 +21,9 @@ html lang="it"
         .search
           = link_to '', '#search', class: 'search__link'
         .language
-          - if I18n.locale == :it
-            = link_to 'EN', locale_path(:en), class: 'language__link'
+          - if content_for? :locale_link
+            = yield :locale_link
           - else
-            = link_to 'IT', locale_path(:it), class: 'language__link'
+            = link_to other_locale.upcase, locale_path, class: 'language__link'
     main
       = yield
