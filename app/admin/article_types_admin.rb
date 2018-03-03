@@ -7,6 +7,7 @@ Trestle.resource(:article_types) do
   end
 
   table do
+    column :id
     column :name_it, header: 'Name Italian'
     column :name_en, header: 'Name English'
     actions

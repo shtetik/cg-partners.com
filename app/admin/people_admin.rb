@@ -7,6 +7,7 @@ Trestle.resource(:people) do
   end
 
   table do
+    column :id
     column :avatar, header: 'Photo' do |person|
       image_tag(person.avatar.url, style: 'height: 25px',)
     end
