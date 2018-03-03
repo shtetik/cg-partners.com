@@ -24,6 +24,7 @@ gem 'friendly_id-globalize', '~> 1.0.0.alpha3'
 # ActiveRecord model/data translation
 gem 'globalize', '~> 5.1'
 gem 'globalize-accessors', '~> 0.2.1'
+gem 'globalize-validations', '~> 0.0.4'
 
 # Admin framework
 gem 'trestle', '~> 0.8.7'
