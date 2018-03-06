@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: articles
+#
+#  id              :integer          not null, primary key
+#  article_type_id :integer          not null
+#  person_id       :integer          not null
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
+
 class Article < ApplicationRecord
   translates :title, :description, :text, :slug
 

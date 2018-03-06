@@ -1,3 +1,22 @@
+# == Schema Information
+#
+# Table name: people
+#
+#  id                  :integer          not null, primary key
+#  emails              :text             default([]), is an Array
+#  position            :string           default(""), not null
+#  telephone           :string           default(""), not null
+#  fax                 :string           default(""), not null
+#  vat                 :string           default(""), not null
+#  linkedin            :string           default(""), not null
+#  created_at          :datetime         not null
+#  updated_at          :datetime         not null
+#  avatar_file_name    :string
+#  avatar_content_type :string
+#  avatar_file_size    :integer
+#  avatar_updated_at   :datetime
+#
+
 class Person < ApplicationRecord
   translates :full_name, :text, :slug
 

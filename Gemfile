@@ -54,6 +54,9 @@ group :development do
   gem 'better_errors', '~> 2.4'
   gem 'binding_of_caller', '~> 0.8.0'
 
+  # Annotate Rails classes with schema and routes info
+  gem 'annotate', '~> 2.7', '>= 2.7.2'
+
   # Deploy tools
   gem 'capistrano', '~> 3.10', '>= 3.10.1'
   gem 'capistrano-bundler', '~> 1.3'

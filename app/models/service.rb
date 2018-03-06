@@ -1,3 +1,13 @@
+# == Schema Information
+#
+# Table name: services
+#
+#  id              :integer          not null, primary key
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  service_type_id :integer          not null
+#
+
 class Service < ApplicationRecord
   translates :title, :text, :slug
 
