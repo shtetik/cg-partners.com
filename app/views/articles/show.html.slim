@@ -15,8 +15,8 @@ article.article
   section
     span> DA
     span.article__author
-      = link_to article.person.full_name.upcase,
-                person_path(article.person.slug),
+      = link_to @article.person.full_name.upcase,
+                person_path(@article.person.slug),
                 class: 'link'
     span
       - time = @article.created_at
