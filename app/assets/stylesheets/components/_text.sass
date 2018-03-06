@@ -1,10 +1,14 @@
 .text
-  @extend %text-second
+  margin-bottom: 2.5rem
+  color: $color--plain
+
+  &--first
+    @extend %text-first
 
   &--second
-    margin-bottom: 2.5rem
+    @extend %text-second
     color: $color--second
 
   &--plain
+    @extend %text-second
     margin-bottom: 1.5rem
-    color: $color--plain

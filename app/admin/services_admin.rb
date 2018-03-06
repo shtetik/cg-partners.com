@@ -25,8 +25,8 @@ Trestle.resource(:services) do
   table do
     column :id
     column :title
-    column :slug
     column :service_type, -> service { service.service_type.name }
+    column :slug
     actions
   end
 

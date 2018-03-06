@@ -1,2 +1,17 @@
 = content_for :locale_link
-  = link_to other_locale.upcase, object_locale_path(@service), class: 'language__link'
+  = link_to other_locale.upcase,
+            object_locale_path(@service),
+            class: 'language__link'
+
+.grid.grid--gutters-normal
+  .grid__cell.grid__cell--2of3
+    h1.title.title--big.title--indent-small COSA FACCIAMO
+    .grid.grid--gutters-normal.grid--downward
+      .grid__cell.grid__cell--2of3
+        .subtitle.subtitle--indent-large.subtitle--underlined
+          = @service.title
+    .columns
+      .text.text--first
+        == @service.text
+  .grid__cell.grid__cell--1of3
+    = render 'aside'

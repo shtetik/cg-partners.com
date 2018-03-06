@@ -11,11 +11,4 @@
     p.text.text--plain
       | Come una squadra, stiamo con le imprese talentuose nella ricerca e implementazione di soluzioni vincenti.
   .grid__cell.grid__cell--1of3
-    .grid
-      - @services_group_by_type.each do |type, services|
-        .grid__cell.grid__cell--indent-large
-          h4.title.title--small.title--indent-small
-            = type.name
-          - services.each do |service|
-            = link_to service.title, service_path(service.slug), class: 'subtitle'
-            br
+    = render 'aside'
