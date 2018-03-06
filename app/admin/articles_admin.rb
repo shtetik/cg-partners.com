@@ -1,8 +1,6 @@
 Trestle.resource(:articles) do
   collection do
-    Article
-      .includes(:translations, { article_type: :translations })
-      .order(created_at: :desc)
+    Article.for_admin
   end
 
   menu do

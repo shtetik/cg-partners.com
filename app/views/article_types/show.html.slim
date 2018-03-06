@@ -1,0 +1,10 @@
+- @article_types.each do |article_type|
+  = active_link_to article_type.name,
+                   focus_path(article_type.slug),
+                   class: 'subtitle subtitle--plain subtitle--indent-bottom-middle'
+
+h1.title.title--big.title--indent-bottom-middle.title--indent-top-middle
+  = @article_type.name.upcase
+
+.masonry-grid
+  = render @articles, article_classes: 'article--indent-bottom-large'

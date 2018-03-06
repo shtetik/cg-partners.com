@@ -1,7 +1,7 @@
 aside.grid
   - @services_group_by_type.each do |type, services|
-    .grid__cell.grid__cell--indent-large
-      h4.title.title--small.title--indent-small
+    .grid__cell.grid__cell--indent-bottom-large
+      h4.title.title--small.title--indent-bottom-small
         = type.name
       - services.each do |service|
         = active_link_to service_path(service.slug), class: 'subtitle'

@@ -7,6 +7,9 @@ Rails.application.routes.draw do
     end
 
     resources :services, only: [:index, :show]
+    resources :articles, only: [:index, :show]
     resources :people, only: [:index, :show]
+
+    get 'focus/:article_type_id', to: 'article_types#show', as: 'focus'
   end
 end

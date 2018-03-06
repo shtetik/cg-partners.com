@@ -1,5 +1,8 @@
 {
   "name": "cgpartners",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "masonry-layout": "^4.2.1"
+  }
 }

@@ -1,0 +1,15 @@
+- article_classes = local_assigns[:article_classes]
+
+.masonry-grid__column.masonry-grid__column--1of2
+  article.article class=article_classes
+    header
+      h4.article__title = article.title
+    section
+      span> DA
+      span.article__author
+        = article.person.full_name.upcase
+      span
+        - time = article.created_at
+        = time_tag time, time.strftime('%d %b %Y').upcase
+      .article__description
+        == article.description

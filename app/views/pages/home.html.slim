@@ -20,7 +20,7 @@
 
 .line
 
-h2.title.title--big.title--indent-small
+h2.title.title--big.title--indent-bottom-small
   | COSA FACCIAMO
 
 .grid.grid--gutters-large
@@ -50,57 +50,14 @@ h2.title.title--big.title--indent-small
 
 = link_to 'APPROFONDISCI', services_path, class: 'button button--indented'
 
-.line
+- ArticleType.includes(:translations).each do |article_type|
+  .line
 
-h2.title.title--big
-  | NEWS
+  h2.title.title--big
+    = article_type.name.upcase
 
-.grid.grid--gutters-large
-  .grid__cell.grid__cell--1of2
-    article.article
-      header
-        h4.article__title CG Partners con Carraro nell'aumento di capitale
-      section
-        span> DA
-        span.article__author
-          | ALESSANDRO CHIEFFI
-        span
-          = time_tag Time.now, Time.now.strftime('%d %b %Y').upcase
-        .article__description
-          | http://www.toplegal.it/news/2017/05/29/20469/lms-nellaumento-di-capitale-di-carraro
+  .masonry-grid
+    = render article_type.articles.for_site.limit(2)
 
-  .grid__cell.grid__cell--1of2
-    article.article
-      header
-        h4.article__title Brevi note in tema di pubblicazione delle informazioni periodiche aggiuntive da parte degli emittenti quotati
-      section
-        span> DA
-        span.article__author
-          | ALESSANDRO CHIEFFI
-        span
-          = time_tag Time.now, Time.now.strftime('%d %b %Y').upcase
-        .article__description
-          | Il 2 gennaio 2017 è entrata in vigore la Delibera Consob n.Text1 19770 del 26 ottobre 2016, con la quale è stato modificato il Regolamento Emittenti in tema di pubblicazione, da parte degli emittenti quotati, delle informazioni periodiche aggiuntive. Nella relazione illustrativa del provvedimento e in alcune comunicazioni di Borsa Italiana si rinvengono utili indicazioni sull’applicazione della norma.
-
-= link_to 'VISUALIZZA TUTTO', focus_path, class: 'button'
-
-.line
-
-h2.title.title--big
-  | APPROFONDIMENTI
-
-.grid.grid--gutters-large
-  - 2.times do
-    .grid__cell.grid__cell--1of2
-      article.article
-        header
-          h4.article__title La vendetta del voto capitario
-        section
-          span.article__author
-            | DA GIANLUCA GREA
-          span
-            = time_tag Time.now, Time.now.strftime('%d %b %Y')
-          .article__description
-            | Il Consiglio di Stato, a pochi giorni dalla scadenza del termine per la trasformazione in spa delle maggiori banche popolari, spariglia le carte sollevando la questione di costituzionalità delle norme sul recesso e sospendendo l’efficacia della Circolare Bankitalia (nonché della legge)
-
-= link_to 'VISUALIZZA TUTTO', focus_path, class: 'button'
+    .masonry-grid__column.masonry-grid__column--1of1
+      = link_to 'VISUALIZZA TUTTO', focus_path(article_type.slug), class: 'button'
