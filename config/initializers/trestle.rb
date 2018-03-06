@@ -213,5 +213,8 @@ Trestle.configure do |config|
     c.convert_urls = false
     c.paste_as_text = true
     c.height = 300
+    c.force_br_newlines = true
+    c.force_p_newlines = false
+    c.forced_root_block = ''
   end
 end
