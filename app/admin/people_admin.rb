@@ -13,7 +13,7 @@ Trestle.resource(:people) do
   table do
     column :id
     column :avatar, header: 'Photo' do |person|
-      image_tag(person.avatar.url, style: 'height: 25px',)
+      image_tag(person.avatar.url, style: 'height: 25px')
     end
     column :full_name
     column :position

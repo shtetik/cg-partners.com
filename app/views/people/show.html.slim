@@ -1,0 +1,49 @@
+= content_for :locale_link
+  = link_to other_locale.upcase,
+            object_locale_path(@person),
+            class: 'language__link'
+
+h2.title.title--big.title--indent-bottom-small CHI SIAMO
+.grid.grid--gutters-normal
+  .grid__cell.grid__cell--1of3
+    .person
+      .person__name = @person.full_name
+      = image_tag @person.avatar.url, class: 'person__avatar'
+      table
+        tbody
+          tr
+            td.person__contact
+              | Email
+            td.person__contact
+              - @person.emails.each do |email|
+                = link_to email, "mailto:#{email}", class: 'link'
+                br
+          tr
+            td.person__contact
+              | Position
+            td.person__contact
+              = @person.position
+          tr
+            td.person__contact
+              | Telefono
+            td.person__contact
+              = link_to "#{@person.telephone}",
+                        "tel:#{@person.telephone}",
+                        class: 'link'
+          tr
+            td.person__contact
+              | Fax
+            td.person__contact
+              .link = @person.fax
+          tr
+            td.person__contact
+              | VAT No.
+            td.person__contact
+              = @person.vat
+      .person__linkedin
+        .person__linkedin__icon
+        = link_to 'SEGUI', @person.linkedin, class: 'button', target: :blank
+  .grid__cell.grid__cell--2of3
+    .text.text--small
+      .columns
+        == @person.text

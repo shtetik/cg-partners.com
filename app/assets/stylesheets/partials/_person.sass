@@ -1,0 +1,29 @@
+.person
+  &__name
+    @extend %subtitle
+    font-weight: normal
+    color: $color--plain
+    margin-bottom: 1.125rem
+
+  &__avatar
+    max-width: 100%
+    height: auto
+    margin-bottom: 1.4rem
+
+  &__contact
+    @extend %text-first
+    vertical-align: top
+    &:nth-child(even)
+      padding-left: 1.4rem
+
+  &__linkedin
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    margin-top: 2rem
+
+    &__icon
+      width: 2.5rem
+      height: 2.5rem
+      background: asset-url('social/linkedin.svg') no-repeat
+      background-size: contain
