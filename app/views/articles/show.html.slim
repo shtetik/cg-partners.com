@@ -1,3 +1,8 @@
+= content_for :locale_link
+  = link_to other_locale.upcase,
+            object_locale_path(@article),
+            class: 'language__link'
+
 - @article_types.each do |article_type|
   = active_link_to article_type.name,
                    focus_path(article_type.slug),
@@ -10,7 +15,9 @@ article.article
   section
     span> DA
     span.article__author
-      = @article.person.full_name.upcase
+      = link_to article.person.full_name.upcase,
+                person_path(article.person.slug),
+                class: 'link'
     span
       - time = @article.created_at
       = time_tag time, time.strftime('%d %b %Y').upcase
