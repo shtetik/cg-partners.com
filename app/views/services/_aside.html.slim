@@ -4,5 +4,5 @@ aside.grid
       h4.title.title--small.title--indent-small
         = type.name
       - services.each do |service|
-        = link_to service_path(service.slug), class: 'subtitle'
+        = active_link_to service_path(service.slug), class: 'subtitle'
           div = service.title

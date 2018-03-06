@@ -13,11 +13,11 @@ html lang="it"
       = link_to '', root_path, class: 'logo'
       nav.nav
         .menu
-          = link_to 'CHI SIAMO'    , people_path  , class: 'menu__link'
-          = link_to 'COSA FACCIAMO', services_path, class: 'menu__link'
-          = link_to 'FOCUS'        , focus_path   , class: 'menu__link'
-          = link_to 'STARTUP'      , startup_path , class: 'menu__link'
-          = link_to 'CONTATTI'     , contact_path , class: 'menu__link'
+          = active_link_to 'CHI SIAMO'    , people_path  , class: 'menu__link'
+          = active_link_to 'COSA FACCIAMO', services_path, class: 'menu__link'
+          = active_link_to 'FOCUS'        , focus_path   , class: 'menu__link'
+          = active_link_to 'STARTUP'      , startup_path , class: 'menu__link'
+          = active_link_to 'CONTATTI'     , contact_path , class: 'menu__link'
         .search
           = link_to '', '#search', class: 'search__link'
         .language

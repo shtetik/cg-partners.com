@@ -14,6 +14,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'pg', '~> 1.0'
 gem 'puma', '~> 3.11', '>= 3.11.2'
 
+# View helper to manage "active" state of a link
+gem 'active_link_to', '~> 1.0', '>= 1.0.5'
+
 # File attachment management
 gem 'paperclip', '~> 5.2', '>= 5.2.1'
 
@@ -51,6 +54,7 @@ group :development do
   gem 'better_errors', '~> 2.4'
   gem 'binding_of_caller', '~> 0.8.0'
 
+  # Deploy tools
   gem 'capistrano', '~> 3.10', '>= 3.10.1'
   gem 'capistrano-bundler', '~> 1.3'
   gem 'capistrano-faster-assets', '~> 1.1'
