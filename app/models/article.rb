@@ -10,7 +10,8 @@
 #
 
 class Article < ApplicationRecord
-  translates :title, :description, :text, :slug
+  translates :title, :description, :text, :slug,
+    fallbacks_for_empty_translations: true
 
   extend FriendlyId
 

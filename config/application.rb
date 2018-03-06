@@ -28,6 +28,8 @@ module Cgpartners
     # Don't generate system test files.
     config.generators.system_tests = nil
 
+    config.i18n.fallbacks = true
+
     config.generators do |g|
       g.orm             :active_record
       g.template_engine :slim
