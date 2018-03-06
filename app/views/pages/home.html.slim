@@ -12,11 +12,9 @@
     p L’eterogenea esperienza acquisita nelle operazioni e attività gestite in prima persona, ci ha consentito di coglierne le diverse angolature, di apprezzarne gli impatti e di verificarne gli effetti nel medio lungo termine.
     p Questo ci permette oggi di considerare, anche in termini di opportunità strategica, tematiche di natura più ampia, affiancando il management delle società con cui lavoriamo.
   .grid__cell.grid__cell--1of3
-    = link_to 'Alessandro Chieffi', '#', class: 'subtitle'
-    br
-    = link_to 'Gianluca Grea', '#', class: 'subtitle'
-    br
-    = link_to 'Anna Lisa Scagliarini', '#', class: 'subtitle'
+    - @people.each do |person|
+      = link_to person.full_name, person_path(person.slug), class: 'subtitle'
+      br
 
 .line
 
@@ -24,40 +22,24 @@ h2.title.title--big.title--indent-bottom-small
   | COSA FACCIAMO
 
 .grid.grid--gutters-large
-  .grid__cell.grid__cell--1of2
-    h4.title.title--small LEGAL
-    = link_to 'Capital Markets', '#', class: 'subtitle'
-    br
-    = link_to 'Diritto Societario - M&A', '#', class: 'subtitle'
-    br
-    = link_to 'Real Estate', '#', class: 'subtitle'
-    br
-    = link_to 'Ambiente ed Energie Rinnovabili', '#', class: 'subtitle'
-    br
-    = link_to 'Contrattualistica', '#', class: 'subtitle'
-    br
-  .grid__cell.grid__cell--1of2
-    h4.title.title--small GOVERNANCE
-    = link_to 'Corporate Governance', '#', class: 'subtitle'
-    br
-    = link_to 'Comliance', '#', class: 'subtitle'
-    br
-    = link_to 'Rapporti con le Istituizioni', '#', class: 'subtitle'
-    br
-    = link_to 'Counseling', '#', class: 'subtitle'
-    br
-    = link_to 'Board Assistance', '#', class: 'subtitle'
+  - @services_group_by_type.each do |type, services|
+    .grid__cell.grid__cell--1of2
+      h4.title.title--small
+        = type.name
+      - services.each do |service|
+        = link_to service.title, service_path(service.slug), class: 'subtitle'
 
 = link_to 'APPROFONDISCI', services_path, class: 'button button--indented'
 
 - ArticleType.includes(:translations).each do |article_type|
-  .line
+  - if article_type.articles.exists?
+    .line
 
-  h2.title.title--big
-    = article_type.name.upcase
+    h2.title.title--big
+      = article_type.name.upcase
 
-  .masonry-grid
-    = render article_type.articles.for_site.limit(2)
+    .masonry-grid
+      = render article_type.articles.for_site.limit(2)
 
-    .masonry-grid__column.masonry-grid__column--1of1
-      = link_to 'VISUALIZZA TUTTO', focus_path(article_type.slug), class: 'button'
+      .masonry-grid__column.masonry-grid__column--1of1
+        = link_to 'VISUALIZZA TUTTO', focus_path(article_type.slug), class: 'button'
