@@ -25,8 +25,6 @@ class Person < ApplicationRecord
 
   has_many :articles, dependent: :destroy
 
-
-
   private
 
   def normalization_emails

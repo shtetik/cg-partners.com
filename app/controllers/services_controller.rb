@@ -5,6 +5,7 @@ class ServicesController < ApplicationController
   end
 
   def show
+    sleep 5
     @service = Service.find(params[:id])
   end
 end

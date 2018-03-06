@@ -14,6 +14,4 @@ class Service < ApplicationRecord
   validate :validates_globalized_attributes
 
   belongs_to :service_type
-
-
 end
