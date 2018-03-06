@@ -1,6 +1,6 @@
 Trestle.resource(:service_types) do
   collection do
-    ServiceType.order(:id)
+    ServiceType.includes(:translations).order(:id)
   end
 
   menu do

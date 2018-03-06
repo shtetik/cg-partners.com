@@ -1,6 +1,6 @@
 Trestle.resource(:services) do
   collection do
-    Service.order(:id)
+    Service.includes(:translations, { service_type: :translations }).order(:id)
   end
 
   menu do
@@ -42,7 +42,9 @@ Trestle.resource(:services) do
     end
 
     sidebar do
-      select :service_type_id, ServiceType.all, label: 'Service Type'
+      select :service_type_id,
+             ServiceType.includes(:translations),
+             label: 'Service Type'
     end
   end
 end

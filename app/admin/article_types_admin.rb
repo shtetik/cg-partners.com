@@ -1,6 +1,6 @@
 Trestle.resource(:article_types) do
   collection do
-    ArticleType.order(:id)
+    ArticleType.includes(:translations).order(:id)
   end
 
   menu do

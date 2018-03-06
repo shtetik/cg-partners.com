@@ -1,6 +1,6 @@
 Trestle.resource(:people) do
   collection do
-    Person.order(:id)
+    Person.includes(:translations).order(:id)
   end
 
   menu do

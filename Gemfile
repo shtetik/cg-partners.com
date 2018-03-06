@@ -57,6 +57,9 @@ group :development do
   # Annotate Rails classes with schema and routes info
   gem 'annotate', '~> 2.7', '>= 2.7.2'
 
+  # Help to kill N+1 queries and unused eager loading
+  gem 'bullet', '~> 5.7', '>= 5.7.3'
+
   # Deploy tools
   gem 'capistrano', '~> 3.10', '>= 3.10.1'
   gem 'capistrano-bundler', '~> 1.3'

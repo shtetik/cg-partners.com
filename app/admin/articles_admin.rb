@@ -1,6 +1,8 @@
 Trestle.resource(:articles) do
   collection do
-    Article.order(created_at: :desc)
+    Article
+      .includes(:translations, { article_type: :translations })
+      .order(created_at: :desc)
   end
 
   menu do
@@ -48,8 +50,12 @@ Trestle.resource(:articles) do
     end
 
     sidebar do
-      select :article_type_id, ArticleType.all, label: 'Article Type'
-      select :person_id, Person.all, label: 'Author'
+      select :article_type_id,
+             ArticleType.includes(:translations),
+             label: 'Article Type'
+      select :person_id,
+             Person.includes(:translations),
+             label: 'Author'
       date_field :created_at, label: 'Publication Date'
     end
   end
