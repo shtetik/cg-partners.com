@@ -1,11 +1,6 @@
 class ArticlesController < ApplicationController
-  def index
-    @articles = Article
-      .includes({ article_type: :translations }, :translations)
-      .order(created_at: :desc)
-  end
-
   def show
-    @article = Article.find(params[:id])
+    @article = Article.find(params[:article_id])
+    @article_types = ArticleType.includes(:translations)
   end
 end

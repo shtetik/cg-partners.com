@@ -5,4 +5,5 @@ aside.grid
         = type.name
       - services.each do |service|
         = active_link_to service_path(service.slug), class: 'subtitle'
-          div = service.title
+          span = service.title
+        br

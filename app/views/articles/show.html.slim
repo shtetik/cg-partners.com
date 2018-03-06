@@ -1,0 +1,19 @@
+- @article_types.each do |article_type|
+  = active_link_to article_type.name,
+                   focus_path(article_type.slug),
+                   class: 'subtitle subtitle--plain subtitle--indent-bottom-middle'
+
+article.article
+  header
+  h1.title.title--middle.title--indent-top-large.title--clipped
+    = @article.title
+  section
+    span> DA
+    span.article__author
+      = @article.person.full_name.upcase
+    span
+      - time = @article.created_at
+      = time_tag time, time.strftime('%d %b %Y').upcase
+    .article__description.article__description--indent-top-large
+      .columns.columns--gap-large
+        == @article.text
