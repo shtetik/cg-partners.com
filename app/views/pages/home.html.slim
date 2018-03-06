@@ -25,7 +25,7 @@ h2.title.title--big.title--indent-bottom-small
   - @services_group_by_type.each do |type, services|
     .grid__cell.grid__cell--1of2
       h4.title.title--small
-        = type.name
+        = type.name.upcase
       - services.each do |service|
         = link_to service.title, service_path(service.slug), class: 'subtitle'
         br
