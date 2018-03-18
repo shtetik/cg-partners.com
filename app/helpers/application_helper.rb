@@ -10,6 +10,13 @@ module ApplicationHelper
   end
 
   def object_locale_path(object, locale = other_locale)
-    url_for id: object.send(:"slug_#{other_locale}"), locale: locale
+    id_key =
+      if params[:article_id].present?
+        :article_id
+      else
+        :id
+      end
+
+    url_for id_key => object.send(:"slug_#{other_locale}"), locale: locale
   end
 end
