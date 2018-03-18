@@ -1,44 +1,100 @@
 .header
   display: flex
+  justify-content: space-between
   height: 4.375em
   margin: 3.125em -4.375em 4.375em 0
 
-.logo
+.header__logo
   width: 4.75em
   margin-right: 6%
   background: asset-url('logo.png') no-repeat
   background-size: contain
 
-.nav
+.header__nav
   display: flex
   flex: auto
-  border: 1px solid #d3dce2
+  border: 1px solid $color--brand
   border-right: none
 
-.menu
+  +media-down(tablet)
+    position: relative
+    flex: none
+    border-left: none
+
+    &--active
+      .header__nav__menu
+        display: flex
+
+      .header__nav__touch__link
+        height: 1.3em
+        background: asset-url('control/cross.svg') no-repeat
+
+.header__nav__menu
   display: flex
   flex: auto
   justify-content: space-around
   align-items: center
 
-.menu,
-.language
+  +media-down(tablet)
+    display: none
+    position: absolute
+    flex-direction: column
+    width: 100%
+    top: calc(4.375em - 1px)
+    left: 0
+    padding: 3.4rem 0
+    background-color: $color--background
+    border: 1px solid $color--brand
+    border-top: none
+    border-right: none
+    z-index: 1000
+
+    &__link
+      margin: 1.2rem 0
+
+  &--open
+    display: block
+
+.header__nav__touch
+  display: none
+
+  &__link
+    height: 1.1em
+    width: 1.375em
+    background: asset-url('control/hamburger.svg') no-repeat
+    background-size: contain
+    margin-top: 2px
+
+  +media-down(tablet)
+    display: block
+
+.header__nav__menu,
+.header__nav__language
   &__link
     @extend %text-first
     color: $color--plain
 
-.search
+    +media-down(tablet)
+      font-size: 1.26rem
+      line-height: 1.26rem
+
+.header__nav__search
   &__link
     height: 1.4375em
     width: 1.375em
     background: asset-url('control/search.svg') no-repeat
-    background-size: 20px auto
+    background-size: contain
+    margin-top: 1px
 
-.search,
-.language
+.header__nav__search,
+.header__nav__language,
+.header__nav__touch
   display: flex
   justify-content: center
   align-items: center
   width: 4.375em
-  border-left: 1px solid #d3dce2
+  border-left: 1px solid $color--brand
+
+  +media-down(tablet)
+    width: 6em
 

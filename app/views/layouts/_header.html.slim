@@ -1,0 +1,33 @@
+header.header
+  = link_to '', root_path, class: 'header__logo'
+  nav.header__nav
+    .header__nav__menu
+      = active_link_to 'CHI SIAMO',
+                       people_path,
+                       class: 'header__nav__menu__link'
+      = active_link_to 'COSA FACCIAMO',
+                       services_path,
+                       class: 'header__nav__menu__link'
+      = active_link_to 'FOCUS',
+                       focus_path('news'),
+                       class: 'header__nav__menu__link',
+                       active: [['article_types', 'articles'], []]
+      = active_link_to 'STARTUP',
+                       startup_path,
+                       class: 'header__nav__menu__link'
+      = active_link_to 'CONTATTI',
+                       contact_path,
+                       class: 'header__nav__menu__link'
+    .header__nav__search
+      = link_to '', '#search', class: 'header__nav__search__link'
+    .header__nav__language
+      - if content_for? :locale_link
+        = yield :locale_link
+      - else
+        = link_to other_locale.upcase,
+                  locale_path,
+                  class: 'header__nav__language__link'
+    .header__nav__touch
+      = link_to '', '#touch-menu',
+                class: 'header__nav__touch__link',
+                id: 'touch-menu'
