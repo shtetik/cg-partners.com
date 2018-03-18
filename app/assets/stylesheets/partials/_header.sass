@@ -1,8 +1,11 @@
 .header
   display: flex
   justify-content: space-between
-  height: 4.375em
-  margin: 3.125em -4.375em 4.375em 0
+  height: $header-height
+  margin: 3.125em -#{$header-height} $header-height 0
+
+  +media-only(mobile)
+    margin: 3.125em 0 0
 
 .header__logo
   width: 4.75em
@@ -29,6 +32,20 @@
         height: 1.3em
         background: asset-url('control/cross.svg') no-repeat
 
+  +media-only(mobile)
+    &--active
+      .header__nav__touch__link
+        height: 1.7em
+
+  +media-only(mobile)
+    position: fixed
+    left: 0
+    bottom: 0
+    width: 100%
+    height: $header-height
+    background-color: $color--background
+    z-index: 1000
+
 .header__nav__menu
   display: flex
   flex: auto
@@ -39,8 +56,9 @@
     display: none
     position: absolute
     flex-direction: column
+    justify-content: center
     width: 100%
-    top: calc(4.375em - 1px)
+    top: calc(#{$header-height} - 1px)
     left: 0
     padding: 3.4rem 0
     background-color: $color--background
@@ -51,6 +69,16 @@
 
     &__link
       margin: 1.2rem 0
+
+  +media-only(mobile)
+    position: fixed
+    left: 0
+    top: 0
+    height: calc(100% - #{$header-height})
+    border: none
+
+    &__link
+      margin: 1rem 0 3rem
 
   &--open
     display: block
@@ -65,8 +93,26 @@
     background-size: contain
     margin-top: 2px
 
+    +media-only(mobile)
+      height: 1.4em
+      width: 1.8em
+      margin-top: 1px
+
   +media-down(tablet)
-    display: block
+    display: flex
+
+
+.header__nav__search
+  &__link
+    height: 1.4375em
+    width: 1.375em
+    background: asset-url('control/search.svg') no-repeat
+    background-size: contain
+    margin-top: 1px
+
+    +media-only(mobile)
+      height: 1.7em
+      width: 1.7em
 
 .header__nav__menu,
 .header__nav__language
@@ -78,23 +124,25 @@
       font-size: 1.26rem
       line-height: 1.26rem
 
-.header__nav__search
-  &__link
-    height: 1.4375em
-    width: 1.375em
-    background: asset-url('control/search.svg') no-repeat
-    background-size: contain
-    margin-top: 1px
+    +media-only(mobile)
+      font-size: 1.8rem
+      line-height: 1.8rem
+
+.header__nav__search,
+.header__nav__language
+  display: flex
 
 .header__nav__search,
 .header__nav__language,
 .header__nav__touch
-  display: flex
   justify-content: center
   align-items: center
-  width: 4.375em
+  width: $header-height
   border-left: 1px solid $color--brand
 
   +media-down(tablet)
     width: 6em
+
+  +media-only(mobile)
+    width: calc(100% / 3)
 
