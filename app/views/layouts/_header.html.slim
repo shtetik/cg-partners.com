@@ -2,20 +2,20 @@ header.header
   = link_to '', root_path, class: 'header__logo'
   nav.header__nav
     .header__nav__menu
-      = active_link_to 'CHI SIAMO',
+      = active_link_to t('menu.people'),
                        people_path,
                        class: 'header__nav__menu__link'
-      = active_link_to 'COSA FACCIAMO',
+      = active_link_to t('menu.services'),
                        services_path,
                        class: 'header__nav__menu__link'
-      = active_link_to 'FOCUS',
+      = active_link_to t('menu.focus'),
                        focus_path('news'),
                        class: 'header__nav__menu__link',
                        active: [['article_types', 'articles'], []]
-      = active_link_to 'STARTUP',
+      = active_link_to t('menu.startup'),
                        startup_path,
                        class: 'header__nav__menu__link'
-      = active_link_to 'CONTATTI',
+      = active_link_to t('menu.contact'),
                        contact_path,
                        class: 'header__nav__menu__link'
     .header__nav__search
