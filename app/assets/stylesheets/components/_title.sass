@@ -1,32 +1,52 @@
 .title
   margin-top: 0
   color: $color--brand
+  overflow-wrap: break-word
+  word-wrap: break-word
 
-  &--big,
-  &--middle
+
+  &--first,
+  &--second
     margin-bottom: 1.6rem
     margin-left: -2px
 
-  &--big
-    @extend %font-apercupro-regular
+  &--first
     @extend %title-first
-  &--middle
+    @extend %font-apercupro-regular
+
+  &--second
     @extend %title-second
+
   &--small
     @extend %title-small
     margin-bottom: 0.8rem
 
+
   &--indent-top-middle
     margin-top: 1.6rem
+
   &--indent-top-large
     margin-top: 2.5rem
 
+    +media-only(mobile)
+      margin-top: 2rem
+
+
   &--indent-bottom-small
     margin-bottom: 1.125rem
+
+    +media-only(mobile)
+      margin-bottom: 1.6rem
+
   &--indent-bottom-middle
     margin-bottom: 1.6rem
+
   &--indent-bottom-large
     margin-bottom: 2.5rem
 
+
   &--clipped
     width: 82%
+
+    +media-only(mobile)
+      width: 100%

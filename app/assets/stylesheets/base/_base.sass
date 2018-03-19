@@ -15,13 +15,21 @@ body
   +media-only(tablet)
     padding: 0 5%
 
+  +media-only(mobile)
+    padding: 0 1em $header-height
+
 main
   position: relative
-  min-width: 320px
   padding-bottom: 4.375em
+
+  +media-only(mobile)
+    padding-bottom: 3.375em
 
 p
   margin-top: 0.4rem
+
+  +media-only(mobile)
+    margin-top: 0
 
 ul, ol
   padding-left: 1rem

@@ -27,6 +27,16 @@
   position: relative
   flex: 100%
 
+  &--mobile-hidden
+    +media-only(mobile)
+      display: none
+
+  &--mobile-visible
+    display: none
+
+    +media-only(mobile)
+      display: block
+
   &--1of2
     flex: 0 0 50%
 
@@ -35,6 +45,9 @@
 
   &--2of3
     flex: 0 0 calc(100% / 3 * 2)
+
+    +media-only(mobile)
+      flex: 0 0 100%
 
   &--1of3
     flex: 0 0 calc(100% / 3)
@@ -50,8 +63,14 @@
     +media-only(tablet)
       flex: 0 0 100%
 
+  &--indent-bottom
+    padding-bottom: 2em
+
   &--indent-bottom-large
     margin-bottom: 5em
 
     +media-down(tablet)
       margin-bottom: 4em
+
+    +media-only(mobile)
+      margin-bottom: 2.8em
