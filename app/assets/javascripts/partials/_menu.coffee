@@ -10,3 +10,4 @@ $(document)
 
   .on 'turbolinks:before-cache', ->
     $('.header__nav').removeClass('header__nav--active')
+    $('html').removeClass('no-scroll')
