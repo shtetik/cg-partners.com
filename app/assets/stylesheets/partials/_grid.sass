@@ -8,6 +8,7 @@
     > .grid__cell
       padding-left: 4%
 
+
   &--gutters-large
     margin-left: -7%
     padding-right: 6%
@@ -17,6 +18,10 @@
   &--downward
     align-items: flex-end
 
+  +media-down(tablet)
+    padding-right: 0
+
+
 
 .grid__cell
   position: relative
@@ -24,7 +29,8 @@
 
   &--1of2
     flex: 0 0 50%
-    +media-down(tablet)
+
+    +media-only(mobile)
       flex: 0 0 100%
 
   &--2of3
@@ -33,5 +39,19 @@
   &--1of3
     flex: 0 0 calc(100% / 3)
 
+    +media-only(mobile)
+      flex: 0 0 100%
+
+  &--tablet-1of2
+    +media-only(tablet)
+      flex: 0 0 50%
+
+  &--tablet-1of1
+    +media-only(tablet)
+      flex: 0 0 100%
+
   &--indent-bottom-large
     margin-bottom: 5em
+
+    +media-down(tablet)
+      margin-bottom: 4em

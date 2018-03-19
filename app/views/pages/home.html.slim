@@ -42,5 +42,4 @@ h2.title.title--big.title--indent-bottom-small
     .masonry-grid
       = render article_type.articles.for_site.limit(2)
 
-      .masonry-grid__column.masonry-grid__column--1of1
-        = link_to 'VISUALIZZA TUTTO', focus_path(article_type.slug), class: 'button'
+    = link_to 'VISUALIZZA TUTTO', focus_path(article_type.slug), class: 'button'

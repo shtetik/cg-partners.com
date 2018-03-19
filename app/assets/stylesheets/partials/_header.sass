@@ -2,7 +2,10 @@
   display: flex
   justify-content: space-between
   height: $header-height
-  margin: 3.125em -#{$header-height} $header-height 0
+  margin: 3.125em -4.375em 4.375em 0
+
+  +media-only(tablet)
+    margin: 5vw -5vw 4.375em 0
 
   +media-only(mobile)
     margin: 3.125em 0 0

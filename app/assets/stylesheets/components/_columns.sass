@@ -3,5 +3,15 @@
   column-gap: 3.125em
   column-fill: balance
 
+  +media-only(mobile)
+    column-count: 1
+
   &--gap-large
     column-gap: 4.825em
+
+    +media-down(tablet)
+      column-gap: 3.6em
+
+  &--tablet-1of1
+    +media-only(tablet)
+      column-count: 1
