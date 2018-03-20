@@ -5,7 +5,7 @@
     header
       = link_to focus_article_path(article.article_type.slug, article.slug),
                 class: 'article__title'
-        div = article.title
+        = article.title
     section
       span> DA
       span.article__author
