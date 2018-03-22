@@ -13,6 +13,7 @@ gem 'rails', '~> 5.1.5'
 gem 'jbuilder', '~> 2.5'
 gem 'pg', '~> 1.0'
 gem 'puma', '~> 3.11', '>= 3.11.2'
+gem 'loofah', '~> 2.2', '>= 2.2.1'
 
 # View helper to manage "active" state of a link
 gem 'active_link_to', '~> 1.0', '>= 1.0.5'
