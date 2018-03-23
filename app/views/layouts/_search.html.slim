@@ -1,0 +1,12 @@
+.search
+  .search__panel
+    = form_with url: search_path, method: :get, id: 'search-form' do |form|
+      = form.search_field :query,
+                          autocomplete: 'off',
+                          placeholder: 'Search / Cerca',
+                          autocorrect: 'off',
+                          class: 'search__panel__query',
+                          id: 'search-query'
+  .search__result#search-result
+  .search__mask#search-mask
+  .search__close#search-close

@@ -1,0 +1,138 @@
+.search
+  position: absolute
+  visibility: hidden
+  width: 100%
+  height: 100%
+  left: 0
+  top: 0
+  z-index: 1001
+  transition: visibility 0.6s
+
+  &__panel,
+  &__result
+    background-color: $color--background
+
+  &__panel
+    opacity: 0
+    padding-left: calc(#{$logo-width} + #{$page-h-padding--desktop} + 6vw)
+    padding-top: 0
+    transition: padding-top 0.6s 0.6s, opacity 0.6s 0.3s
+
+    +media-only(mobile)
+      padding-left: calc(#{$logo-width} + #{$page-h-padding--mobile} + 6vw)
+
+    &__query
+      @extend %subtitle
+      position: relative
+      width: 100%
+      height: $menu-height
+      border: none
+      border-bottom: 1px solid $color--brand
+      padding: 1rem
+      padding-right: 4rem
+      outline: none
+      background-color: $color--background
+      opacity: 0
+      transition: opacity 0.3s
+      appearance: none
+      border: none
+
+      +media-only(mobile)
+        padding-right: 2.6rem
+        padding-left: 0.6rem
+        font-size: 1.6rem
+        line-height: normal
+
+  &__result
+    padding: 0 $page-h-padding--desktop
+    opacity: 0
+    transition: opacity 0.3s, padding-top 0.3s
+
+    +media-only(tablet)
+      padding: 0 $page-h-padding--tablet
+
+    +media-only(mobile)
+      padding: 0 $page-h-padding--mobile
+
+    &__counter
+      margin-bottom: 3.75rem
+
+      +media-only(mobile)
+        margin-bottom: 3rem
+
+  &__mask
+    position: absolute
+    width: 100%
+    height: 100vh
+    background-color: $color--brand
+    opacity: 0
+    transition: opacity 0.6s
+
+  &__close
+    position: absolute
+    right: 1.5rem
+    top: calc(#{$page-top-padding--desktop} + #{$menu-height} / 2 - 0.65rem)
+    height: 1.3rem
+    width: 1.375rem
+    background: asset-url('control/cross.svg') no-repeat
+    background-size: contain
+    cursor: pointer
+    opacity: 0
+    transition: opacity 0.3s
+
+    +media-only(tablet)
+      top: calc(#{$page-top-padding--tablet} + #{$menu-height} / 2 - 0.65rem)
+
+    +media-only(mobile)
+      top: calc(#{$page-top-padding--mobile} + #{$menu-height} / 2 - 0.45rem)
+      right: 0.5rem
+
+
+.js-search .search
+  visibility: visible
+
+  &__panel
+    opacity: 1
+    padding-top: $page-top-padding--desktop
+    transition: padding-top 0.6s, opacity 0.6s
+
+    +media-only(tablet)
+      padding-top: $page-top-padding--tablet
+
+    +media-only(mobile)
+      padding-top: $page-top-padding--mobile
+
+    &__query
+      opacity: 1
+      transition: opacity 0.6s 0.3s
+
+  &__result
+    opacity: 1
+    padding-top: 5.9375rem
+    transition: opacity 0.6s, padding-top 0.3s
+
+    +media-only(tablet)
+      padding-top: 5.5rem
+
+    +media-only(mobile)
+      padding-top: 5rem
+
+  &__mask
+    height: 100vh
+    opacity: 1
+    transition: opacity 0.6s
+
+  &__close
+    opacity: 1
+    transition: opacity 0.6s 0.3s
+
+
+.js-search--result .search
+  &__result
+    padding-bottom: 3rem
+
+    +media-only(mobile)
+      padding-bottom: $menu-height + 3rem
+
+  &__mask
+    height: auto

@@ -12,5 +12,7 @@ Rails.application.routes.draw do
 
     get 'focus/:article_type_id', to: 'article_types#show', as: 'focus'
     get 'focus/:article_type_id/:article_id', to: 'articles#show', as: 'focus_article'
+
+    get :search, to: 'search#index', as: :search
   end
 end

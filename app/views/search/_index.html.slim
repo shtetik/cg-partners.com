@@ -1,0 +1,47 @@
+.search__result__counter
+  span.subtitle.subtitle--plain>
+    | #{@total_size} results
+  span.subtitle
+    | for #{@query}
+
+/ Articles
+- @articles.group_by(&:article_type).each do |article_type, articles|
+    h2.title.title--first
+      = article_type.name.upcase
+
+    .masonry-grid
+      = render articles,
+        article_classes: 'article--indent-bottom-large'
+
+    .line
+
+/ People
+- if @people.present?
+  h2.title.title--first.title--indent-bottom-small
+    = t('menu.people')
+
+  .grid.grid--gutters-large
+    - @people.each do |person|
+      .grid__cell.grid__cell--1of2
+        = link_to person.full_name,
+                  person_path(person.slug),
+                  class: 'subtitle subtitle--indent-bottom-average'
+        .text.text--first
+          = truncate(person.text, escape: false, length: 300)
+
+- if @people.present? && @services.present?
+  .line
+
+/ Services
+- if @services.present?
+  h2.title.title--first.title--indent-bottom-small
+    = t('menu.services')
+
+  .grid.grid--gutters-large
+    - @services.each do |service|
+      .grid__cell.grid__cell--1of2
+        = link_to service.title,
+                  service_path(service.slug),
+                  class: 'subtitle subtitle--indent-bottom-average'
+        .text.text--first
+          = truncate(service.text, escape: false, length: 300)

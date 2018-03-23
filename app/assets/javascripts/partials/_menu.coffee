@@ -6,8 +6,8 @@ $(document)
       $(@).closest('.header__nav').toggleClass('header__nav--active')
 
       if Helpers.isMobileWidth()
-        $('html').toggleClass('no-scroll')
+        $('html').toggleClass('js-menu')
 
   .on 'turbolinks:before-cache', ->
     $('.header__nav').removeClass('header__nav--active')
-    $('html').removeClass('no-scroll')
+    $('html').removeClass('js-menu')

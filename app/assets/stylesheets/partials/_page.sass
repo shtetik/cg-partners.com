@@ -1,0 +1,22 @@
+.page
+  position: relative
+  overflow: hidden
+  padding: $page-top-padding--desktop $page-h-padding--desktop 0
+
+  +media-only(tablet)
+    padding: $page-top-padding--tablet $page-h-padding--tablet 0
+
+  +media-only(mobile)
+    padding: $page-top-padding--mobile $page-h-padding--mobile $menu-height
+
+
+.js-search .page
+  height: 100vh
+  overflow: hidden
+
+
+.js-search--result .page
+  overflow-y: scroll
+
+  +media-only(mobile)
+    -webkit-overflow-scrolling: touch

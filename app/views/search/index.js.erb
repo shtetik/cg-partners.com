@@ -1,0 +1,4 @@
+var result = $("<%= j(render 'index') %>")
+$('html').addClass('js-search--result')
+$('#search-result').html(result)
+window.initMasonryGrid()

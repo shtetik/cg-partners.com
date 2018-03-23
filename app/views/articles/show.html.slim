@@ -2,8 +2,8 @@
 
 - @article_types.each do |article_type|
   = active_link_to article_type.name,
-                   focus_path(article_type.slug),
-                   class: 'subtitle subtitle--plain subtitle--indent-bottom-middle'
+    focus_path(article_type.slug),
+    class: 'subtitle subtitle--plain subtitle--indent-right-large subtitle--indent-bottom-middle'
 
 article.article
   header

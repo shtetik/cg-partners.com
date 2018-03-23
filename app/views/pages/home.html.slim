@@ -1,6 +1,6 @@
 .grid.grid--gutters-normal.grid--downward
   .grid__cell.grid__cell--2of3
-    h2.title.title--first CHI SIAMO
+    h2.title.title--first = t('menu.people')
   .grid__cell.grid__cell--1of3.grid__cell--mobile-hidden
     h4.title.title--small CURRICULUM
 
@@ -18,7 +18,7 @@
 .line
 
 h2.title.title--first.title--indent-bottom-small
-  | COSA FACCIAMO
+  = t('menu.services')
 
 .grid.grid--gutters-large
   - @services_group_by_type.each do |type, services|

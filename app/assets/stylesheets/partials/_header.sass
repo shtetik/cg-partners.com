@@ -1,20 +1,31 @@
 .header
+  position: relative
   display: flex
-  justify-content: space-between
-  height: $header-height
-  margin: 3.125em -4.375em 4.375em 0
+  justify-content: flex-end
+  height: $menu-height
+  margin: 0 -4.375em 4.375em 0
+  padding-left: calc(#{$logo-width} + 6vw)
 
   +media-only(tablet)
-    margin: 5vw -5vw 4.375em 0
+    margin: 0 -5vw 4.375em 0
+    padding-left: calc(#{$logo-width} + 6vw)
 
   +media-only(mobile)
-    margin: 1em 0 1.6em
+    margin: 0 0 1.6em
+    padding-left: calc(#{$logo-width} + 6vw)
 
 .header__logo
-  width: 4.75em
-  margin-right: 6%
+  position: absolute
+  left: 0
+  top: 0
+  width: $logo-width
+  height: $logo-height
   background: asset-url('logo.png') no-repeat
   background-size: contain
+  z-index: 1002
+
+  +media-only(mobile)
+    z-index: 1002
 
 .header__nav
   display: flex
@@ -45,9 +56,9 @@
     left: 0
     bottom: 0
     width: 100%
-    height: $header-height
+    height: $menu-height
     background-color: $color--background
-    z-index: 1000
+    z-index: 1003
 
 .header__nav__menu
   display: flex
@@ -61,7 +72,7 @@
     flex-direction: column
     justify-content: center
     width: 100%
-    top: calc(#{$header-height} - 1px)
+    top: calc(#{$menu-height} - 1px)
     left: 0
     padding: 3.4rem 0
     background-color: $color--background
@@ -77,7 +88,7 @@
     position: fixed
     left: 0
     top: 0
-    height: calc(100% - #{$header-height})
+    height: calc(100% - #{$menu-height})
     border: none
 
     &__link
@@ -141,7 +152,7 @@
 .header__nav__touch
   justify-content: center
   align-items: center
-  width: $header-height
+  width: $menu-height
   border-left: 1px solid $color--brand
 
   +media-down(tablet)

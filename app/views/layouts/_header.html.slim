@@ -18,7 +18,7 @@ header.header
       = active_link_to t('menu.contact'),
                        contact_path,
                        class: 'header__nav__menu__link'
-    = link_to '#search', class: 'header__nav__search'
+    = link_to '#search', class: 'header__nav__search', id: 'search'
         .header__nav__search__icon
     = link_to yield(:locale_link).presence || locale_path, class: 'header__nav__language'
       .header__nav__language__value
