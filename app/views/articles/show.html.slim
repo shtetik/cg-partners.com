@@ -1,4 +1,4 @@
-= content_for :locale_link, object_locale_path(@article)
+- content_for :locale_link, object_locale_path(@article)
 
 - @article_types.each do |article_type|
   = active_link_to article_type.name,
