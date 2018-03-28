@@ -39,6 +39,6 @@ h2.title.title--first.title--indent-bottom-small
       = article_type.name.upcase
 
     .masonry-grid
-      = render article_type.articles.for_site.limit(2)
+      = render article_type.articles.published.for_site.limit(4)
 
     = link_to 'VISUALIZZA TUTTO', focus_path(article_type.slug), class: 'button'
