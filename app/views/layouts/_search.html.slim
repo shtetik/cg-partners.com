@@ -2,7 +2,7 @@
   .search__panel
     = form_with url: search_path, method: :get, id: 'search-form' do |form|
       = form.search_field :query,
-                          placeholder: 'Search / Cerca',
+                          placeholder: t('search'),
                           autocomplete: 'off',
                           autocorrect: 'off',
                           autocapitalize: 'off',

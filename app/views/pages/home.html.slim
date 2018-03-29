@@ -29,7 +29,9 @@ h2.title.title--first.title--indent-bottom-small
         = link_to service.title, service_path(service.slug), class: 'subtitle'
         br
 
-= link_to 'APPROFONDISCI', services_path, class: 'button button--indented'
+= link_to t('pages.home.discover'),
+          services_path,
+          class: 'button button--indented'
 
 - ArticleType.includes(:translations).each do |article_type|
   - if article_type.articles.exists?
@@ -41,4 +43,6 @@ h2.title.title--first.title--indent-bottom-small
     .masonry-grid
       = render article_type.articles.published.for_site.limit(4)
 
-    = link_to 'VISUALIZZA TUTTO', focus_path(article_type.slug), class: 'button'
+    = link_to t('pages.home.see_all'),
+              focus_path(article_type.slug),
+              class: 'button'

@@ -1,4 +1,5 @@
 en:
+  search: 'Search'
   menu:
     people: WHO WE ARE
     services: WHAT WE DO
@@ -6,10 +7,14 @@ en:
     startup: STARTUP
     contact: CONTACTS
   pages:
+    home:
+      discover: 'DISCOVER'
+      see_all: 'SEE ALL'
     startup:
       text: "We strongly believe in innovation and young business professionals. Accordingly, we put stake in new entrepreneurial ideas by following their creation and growth, supporting them through means proportionate to their magnitude. \n\n We offer our expertise on corporate matters to start-ups, by suggesting the most suitable type of company, always taking into consideration at what stage the development of the project is in, and by proposing the most efficient models for governance and organization. When requested, we back up the start-ups with writing and negotiating contracts tied to investment and financing operations during the early phase (so called seed). \n\n Moreover, we help start-ups identify contractual reference models so as to regulate their relationships with suppliers and customers, tailoring them accordingly to the type of business. \n\n We feel the need to continuously stand by young enterprises. Therefore, we chose to install a branch of ours in Rome, using space made available by Luiss Enlabs-La Fabbrica delle Startup (i.e.: the Factory of Start-ups), a project resulting from an agreement between the venture capital listed company LVenture S.p.A. and the Luiss University in Rome. \n\n"
     people:
       text: "Our professional experience has grown in various contexts, in national and multinational groups both in Italy and abroad, as well as in listed companies under the oversight of authorities such as Consob and Banca d’Italia.\n\n We have served as general counsels and consultants for: banks, finance companies, regulation authorities and market operations authorities (Borsa Italiana), industry and service companies, brokerage firms, asset management companies, real estate and environment companies.\n\n Such diverse knowledge gained through first-hand experience directing all these operations has helped us to understand their different aspects, to evaluate their impact and to test their effect over a medium-long term.\n\n This allows us today to consider a broader range of issues while assisting the management of our partner companies, focusing too on a strategic point of view for opportunities.\n\n"
+      follow: 'FOLLOW'
     services:
       quote_text: “There is no curve where you can not overtake”
       quote_author: (Ayrton Senna)

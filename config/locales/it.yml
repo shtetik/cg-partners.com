@@ -1,4 +1,5 @@
 it:
+  search: 'Cerca'
   menu:
     people: CHI SIAMO
     services: COSA FACCIAMO
@@ -6,10 +7,14 @@ it:
     startup: STARTUP
     contact: CONTATTI
   pages:
+    home:
+      discover: 'APPROFONDISCI'
+      see_all: 'VISUALIZZA TUTTO'
     startup:
       text: "Crediamo nell’innovazione e nei giovani. Per questo abbiamo deciso di scommettere sulle nuove idee imprenditoriali accompagnandole nel processo di nascita e crescita, sostenendole con modalità adeguate alla loro dimensione. \n\n Mettiamo a disposizione delle start-up la nostra esperienza in materia societaria consigliando il tipo di società più appropriato, tenuto conto dello stadio di sviluppo del progetto, e proponendo i modelli di organizzazione interna e di governance più efficienti. Quando richiesto, affianchiamo le start-up nella stesura e negoziazione dei contratti di investimento e di finanziamento nella fase iniziale (c.d. seed). \n\n Inoltre aiutiamo le start-up a individuare i modelli contrattuali di riferimento per disciplinare i rapporti con fornitori e clienti, personalizzandoli in base alla tipologia di business. \n\n Sentiamo il bisogno di essere vicini alle giovani imprese in modo continuativo e per questo abbiamo scelto di collocare il nostro ufficio romano presso uno spazio messo a disposizione da Luiss Enlabs-La Fabbrica delle Startup, iniziativa frutto di un accordo tra la società quotata di venture capital LVenture S.p.A. e l’Università Luiss di Roma. \n\n"
     people:
       text: "Il nostro vissuto professionale è maturato in differenti contesti, in gruppi nazionali e multinazionali italiani ed esteri, anche quotati e sottoposti alla vigilanza delle autorità (Consob, Banca d’Italia).\n\n Abbiamo ricoperto il ruolo di giuristi di impresa (general counsel) e di consulenti nei settori bancari e finanziari, enti regolatori e di servizi di mercato (Borsa Italiana), industriali e di servizi, di intermediazione e gestione del risparmio, real estate e ambiente.\n\n L’eterogenea esperienza acquisita nelle operazioni e attività gestite in prima persona, ci ha consentito di coglierne le diverse angolature, di apprezzarne gli impatti e di verificarne gli effetti nel medio lungo termine.\n\n Questo ci permette oggi di considerare, anche in termini di opportunità strategica, tematiche di natura più ampia, affiancando il management delle società con cui lavoriamo.\n\n"
+      follow: 'SEGUI'
     services:
       quote_text: “Non esiste curva dove non si possa sorpassare”
       quote_author: (Ayrton Senna)
