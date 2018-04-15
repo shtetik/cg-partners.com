@@ -21,9 +21,6 @@ Trestle.resource(:people) do
   end
 
   form do |person|
-  end
-
-  form do |service|
     tab :italian do
       text_field :full_name_it, label: "Full Name"
       editor :text_it, label: "Text"
