@@ -1,24 +1,18 @@
-# README
+# Website [cg-partners.com](https://cg-partners.com)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# The Author
+Code with 🍺 by Pavel Kulikov (shtetik) in 2018.
 
-Things you may want to cover:
+<shtetik@gmail.com>
 
-* Ruby version
+# Stack
+* Ruby on Rails 5.1, PostgreSQL, Trestle Admin, FriendlyID, Paperclip, Globalize
+* Coffeescript, Turbolinks, JQuery, Slim, Sass, Autoprefixer
+* DigitalOcean, Nginx, Phusion Passenger, Capistrano, HTTPS (Let’s Encrypt)
 
-* System dependencies
+# License
+Code licensed under an [MIT-style License]().
 
-* Configuration
+Images, Videos and Texts licensed under [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png"/></a>
