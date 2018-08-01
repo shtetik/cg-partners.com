@@ -11,7 +11,7 @@ Code with 🍺 by Pavel Kulikov (shtetik) in 2018.
 * DigitalOcean, Nginx, Phusion Passenger, Capistrano, HTTPS (Let’s Encrypt)
 
 # License
-Code licensed under an [MIT-style License]().
+Code licensed under an [MIT-style License](https://github.com/shtetik/cg-partners.com/blob/master/LICENSE).
 
 Images, Videos and Texts licensed under [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
 
